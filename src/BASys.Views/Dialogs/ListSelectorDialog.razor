@@ -1,0 +1,14 @@
+@inherits ObservingComponentBase
+
+<DialogFrame Title="@ViewModel.Title" Width="460px">
+    <select class="form-select form-select-sm listbox" size="8" @onchange="OnSelectionChanged">
+        @foreach (KeyValuePair<string, string> currentItem in ViewModel.Items)
+        {
+            <option value="@currentItem.Value" selected="@(currentItem.Value == ViewModel.SelectedValue)">@currentItem.Key</option>
+        }
+    </select>
+    <div class="button-row">
+        <button type="button" class="btn btn-sm btn-primary" disabled="@(!ViewModel.ContinueCommand.CanExecute(null))" @onclick="OnContinue">@ViewModel.ContinueText</button>
+        <button type="button" class="btn btn-sm btn-outline-secondary" @onclick="OnCancel">@ViewModel.CancelText</button>
+    </div>
+</DialogFrame>

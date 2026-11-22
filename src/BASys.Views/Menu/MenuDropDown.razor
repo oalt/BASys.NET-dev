@@ -1,0 +1,11 @@
+@inherits ObservingComponentBase
+
+<div class="menu-dropdown">
+    <div class="menu-title @(IsOpen ? "open" : string.Empty)" @onclick="OnTitleClick" @onmouseenter="OnTitleHover">@Title</div>
+    @if (IsOpen)
+    {
+        <div class="menu-popup">
+            @ChildContent
+        </div>
+    }
+</div>

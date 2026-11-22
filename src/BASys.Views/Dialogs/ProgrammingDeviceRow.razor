@@ -1,0 +1,10 @@
+@inherits ObservingComponentBase
+
+<tr class="@(Row.IsSelected ? "selected" : string.Empty)" @onclick="OnClick">
+    <td>@Row.Name</td>
+    <td>@Row.Manufacturer</td>
+    <td>@Row.Product</td>
+    <td>@Row.PhysicalAddress</td>
+    <td>@Row.State</td>
+    <td>@Row.InstallationLocation</td>
+</tr>

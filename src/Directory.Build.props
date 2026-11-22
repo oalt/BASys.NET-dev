@@ -1,0 +1,9 @@
+<Project>
+
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <Company>BASys</Company>
+    <Product>BASys 2003</Product>
+  </PropertyGroup>
+
+</Project>

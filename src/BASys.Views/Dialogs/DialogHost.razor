@@ -1,0 +1,45 @@
+@inherits ObservingComponentBase
+
+@foreach (DialogViewModelBase currentDialog in Host.OpenDialogs)
+{
+    <div class="dialog-backdrop" @key="currentDialog">
+        @switch (currentDialog)
+        {
+            case TelegramDialogViewModel telegramDialog:
+                <TelegramDialog ViewModel="telegramDialog" />
+                break;
+            case MessageDialogViewModel messageDialog:
+                <MessageDialog ViewModel="messageDialog" />
+                break;
+            case NewProjectDialogViewModel newProjectDialog:
+                <NewProjectDialog ViewModel="newProjectDialog" />
+                break;
+            case NewEndDeviceDialogViewModel newEndDeviceDialog:
+                <NewEndDeviceDialog ViewModel="newEndDeviceDialog" />
+                break;
+            case EibProgrammingDialogViewModel programmingDialog:
+                <EibProgrammingDialog ViewModel="programmingDialog" />
+                break;
+            case EibDataDialogViewModel eibDataDialog:
+                <EibDataDialog ViewModel="eibDataDialog" />
+                break;
+            case AboutDialogViewModel aboutDialog:
+                <AboutDialog ViewModel="aboutDialog" />
+                break;
+            case LanguageDialogViewModel languageDialog:
+                <LanguageDialog ViewModel="languageDialog" />
+                break;
+            case ConfirmSaveDialogViewModel confirmSaveDialog:
+                <ConfirmSaveDialog ViewModel="confirmSaveDialog" />
+                break;
+            case TextPromptDialogViewModel textPromptDialog:
+                <TextPromptDialog ViewModel="textPromptDialog" />
+                break;
+            case ListSelectorDialogViewModel listSelectorDialog:
+                <ListSelectorDialog ViewModel="listSelectorDialog" />
+                break;
+            default:
+                break;
+        }
+    </div>
+}

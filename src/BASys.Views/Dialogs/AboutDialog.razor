@@ -1,0 +1,11 @@
+<DialogFrame Title="@ViewModel.Title" Width="440px">
+    <div class="about">
+        <img src="@AssetPaths.Image("basys.png")" alt="BASys 2003" />
+        <div>@ViewModel.Description</div>
+        <div>@ViewModel.Version</div>
+        <div>@ViewModel.Copyright</div>
+    </div>
+    <div class="button-row">
+        <button type="button" class="btn btn-sm btn-primary" @onclick="OnOk">@Localizer["blabel.ok"]</button>
+    </div>
+</DialogFrame>

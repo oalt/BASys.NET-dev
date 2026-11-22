@@ -1,0 +1,29 @@
+@inherits ObservingComponentBase
+
+<div class="structural-view">
+    <div class="palette">
+        <PaletteItem Item="PaletteItemType.Building" Icon="building" Text="@T("l.building")" />
+        <PaletteItem Item="PaletteItemType.Floor" Icon="layers" Text="@T("l.floor")" />
+        <PaletteItem Item="PaletteItemType.Room" Icon="door-open" Text="@T("l.room")" />
+        <PaletteItem Item="PaletteItemType.JunctionBox" Icon="hdd-rack" Text="@T("l.junctionbox")" />
+        <PaletteItem Item="PaletteItemType.Lamp" Icon="lightbulb" Text="@T("l.lamp")" />
+        <PaletteItem Item="PaletteItemType.DimmableLamp" Icon="lightbulb-fill" Text="@T("l.dimlamp")" />
+        <PaletteItem Item="PaletteItemType.Valve" Icon="droplet" Text="@T("l.valve")" />
+        <PaletteItem Item="PaletteItemType.Jalousie" Icon="distribute-vertical" Text="@T("l.jal")" />
+        <PaletteItem Item="PaletteItemType.Sensor" Icon="broadcast-pin" Text="@T("l.sensor")" />
+    </div>
+    <div class="structural-content" @oncontextmenu="OnContextMenu" @oncontextmenu:preventDefault="true">
+        @if (Project.SelectedRoom != null)
+        {
+            <RoomView Room="Project.SelectedRoom" Main="Main" />
+        }
+        else if (Project.SelectedNode != null)
+        {
+            <StructureTableView Node="Project.SelectedNode" Project="Project" Main="Main" />
+        }
+        else
+        {
+            <div class="hint">@T("l.noSelection")</div>
+        }
+    </div>
+</div>

@@ -1,0 +1,13 @@
+EX-IM
+N sample
+T 1 test
+C 1 1 1 1 ID
+C 1 1 1 1 NAME
+R 1 1 1 widget
+1
+Lamp & <Switch>
+R 1 1 1 widget
+2
+Valve
+-
+XXX

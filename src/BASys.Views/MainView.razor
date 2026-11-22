@@ -1,0 +1,20 @@
+@inherits ObservingComponentBase
+
+<div class="app" tabindex="0" @onkeydown="OnKeyDown">
+    <MenuBar ViewModel="ViewModel" />
+    <ToolBar ViewModel="ViewModel" />
+    <div class="app-content">
+        @if (ViewModel.Project != null)
+        {
+            <ProjectView Project="ViewModel.Project" Main="ViewModel" />
+        }
+        else
+        {
+            <div class="startup">
+                <img src="@AssetPaths.Image("basys.png")" alt="BASys 2003" />
+            </div>
+        }
+    </div>
+    <div class="statusbar bg-body-tertiary border-top">Status: @ViewModel.StatusText</div>
+</div>
+<DialogHost Host="ViewModel.Dialogs" />

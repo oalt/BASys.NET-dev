@@ -1,0 +1,24 @@
+@inherits ObservingComponentBase
+
+<div class="room-view">
+    <h2>@Node.Name: @T(TitleKey)</h2>
+    <DropZone Accepts="Accepts" OnItemDropped="OnItemDropped">
+        <div class="grid-container tall">
+            <table class="table table-sm table-bordered table-hover grid mb-0">
+                <thead>
+                    <tr>
+                        <th>@T("tc.name")</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (ArchitecturalNodeViewModel currentChild in Node.Children)
+                    {
+                        <tr @key="currentChild" class="@(currentChild.IsSelected ? "selected" : string.Empty)" @ondblclick="@(() => OnRowClick(currentChild))">
+                            <td>@currentChild.Name</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </DropZone>
+</div>

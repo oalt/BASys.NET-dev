@@ -1,0 +1,13 @@
+<LoggingErrorBoundary @ref="_boundary">
+    <ChildContent>
+        <MainView />
+    </ChildContent>
+    <ErrorContent Context="exception">
+        <div class="app-error">
+            <h5>Unerwarteter Fehler / Unexpected error</h5>
+            <pre>@exception.Message</pre>
+            <div>@ErrorLog.LogFileName</div>
+            <button type="button" class="btn btn-sm btn-primary" @onclick="OnRecover">OK</button>
+        </div>
+    </ErrorContent>
+</LoggingErrorBoundary>

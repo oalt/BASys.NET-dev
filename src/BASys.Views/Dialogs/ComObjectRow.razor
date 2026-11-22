@@ -1,0 +1,17 @@
+@inherits ObservingComponentBase
+
+<tr class="@(Row.IsSelected ? "selected" : string.Empty)" @onclick="OnClick">
+    <td>@Row.CommunicationObject.Number</td>
+    <td>@Row.CommunicationObject.Name</td>
+    <td>@Row.CommunicationObject.Function</td>
+    <td>@Row.CommunicationObject.Type</td>
+    <td @onclick:stopPropagation="true">
+        <select class="form-select form-select-sm function-select" value="@Row.FunctionType" @onchange="OnFunctionTypeChanged">
+            @foreach (string currentType in EibDeviceFunction.FunctionTypes)
+            {
+                <option value="@currentType" selected="@(currentType == Row.FunctionType)">@currentType</option>
+            }
+        </select>
+    </td>
+    <td>@Row.RelatedFunctions</td>
+</tr>

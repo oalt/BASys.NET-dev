@@ -1,0 +1,12 @@
+@inherits ObservingComponentBase
+
+<div class="tool-window">
+    @switch (Dialog)
+    {
+        case BusMonitorDialogViewModel busMonitorDialog:
+            <BusMonitorDialog ViewModel="busMonitorDialog" />
+            break;
+        default:
+            break;
+    }
+</div>

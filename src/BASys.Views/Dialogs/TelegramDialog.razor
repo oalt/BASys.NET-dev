@@ -1,0 +1,102 @@
+@inherits ObservingComponentBase
+
+<DialogFrame Title="@ViewModel.Title" Width="760px">
+    <div class="telegram-grid">
+        <fieldset>
+            <legend>Control Field / Routing Counter</legend>
+            <div class="telegram-row">
+                <span>Priority:</span>
+                <select class="form-select form-select-sm" @bind="PriorityIndex">
+                    @for (int index = 0; index < ViewModel.PriorityNames.Count; index++)
+                    {
+                        <option value="@index">@ViewModel.PriorityNames[index]</option>
+                    }
+                </select>
+                <label class="form-check-label"><input type="checkbox" class="form-check-input me-1" @bind="Repeat" />Repeat</label>
+                <span>RC:</span>
+                <select class="form-select form-select-sm" @bind="RoutingCounter">
+                    @for (int index = 0; index <= 7; index++)
+                    {
+                        <option value="@index">@index</option>
+                    }
+                </select>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Source Address (Physical Address)</legend>
+            <div class="telegram-row">
+                <span>Zone:</span>
+                <input class="form-control form-control-sm byte-input" @bind="SourceZone" />
+                <span>Line:</span>
+                <input class="form-control form-control-sm byte-input" @bind="SourceLine" />
+                <span>Node:</span>
+                <input class="form-control form-control-sm byte-input" @bind="SourceNode" />
+            </div>
+        </fieldset>
+    </div>
+    <fieldset>
+        <legend>Destination Address</legend>
+        <div class="telegram-row">
+            <label class="form-check-label"><input type="checkbox" class="form-check-input me-1" @bind="IsPhysicalDestination" />Physical Address</label>
+            <input class="form-control form-control-sm byte-input" @bind="DestinationPart1" />
+            <span>@(ViewModel.IsPhysicalDestination ? "." : "/")</span>
+            <input class="form-control form-control-sm byte-input" @bind="DestinationPart2" />
+            @if (ViewModel.IsDestinationPart3Visible)
+            {
+                <span>@(ViewModel.IsPhysicalDestination ? "." : "/")</span>
+                <input class="form-control form-control-sm byte-input" @bind="DestinationPart3" />
+            }
+            <label class="form-check-label ms-3"><input type="checkbox" class="form-check-input me-1" disabled="@ViewModel.IsPhysicalDestination" @bind="IsTwoLevelGroup" />2-level group address</label>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>TPCI / APCI</legend>
+        <div class="telegram-row">
+            <span>TPCI:</span>
+            <select class="form-select form-select-sm" @bind="TpciIndex">
+                @for (int index = 0; index < ViewModel.TpciOptions.Count; index++)
+                {
+                    <option value="@index">@ViewModel.TpciOptions[index].Text</option>
+                }
+            </select>
+            <span>APCI:</span>
+            <select class="form-select form-select-sm" disabled="@(!ViewModel.IsDataEnabled)" @bind="ApciIndex">
+                @for (int index = 0; index < ViewModel.ApciOptions.Count; index++)
+                {
+                    <option value="@index">@ViewModel.ApciOptions[index].Text</option>
+                }
+            </select>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Data</legend>
+        <div class="telegram-row">
+            <span>Data length:</span>
+            <select class="form-select form-select-sm" disabled="@(!ViewModel.IsDataEnabled)" @bind="DataLengthIndex">
+                @for (int index = 0; index < ViewModel.DataLengthNames.Count; index++)
+                {
+                    <option value="@index">@ViewModel.DataLengthNames[index]</option>
+                }
+            </select>
+            <span>Data:</span>
+            @foreach (TelegramDataFieldViewModel currentField in ViewModel.DataFields)
+            {
+                <input class="form-control form-control-sm byte-input" @key="currentField" value="@currentField.Text"
+                       disabled="@(!currentField.IsEditable || !ViewModel.IsDataEnabled)"
+                       @onchange="@(args => OnDataInput(currentField, args))" />
+            }
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>EIB Frame</legend>
+        <input class="form-control form-control-sm frame-field" value="@ViewModel.FrameText" readonly />
+    </fieldset>
+    @if (ViewModel.ErrorText.Length > 0)
+    {
+        <div class="text-danger small">@ViewModel.ErrorText</div>
+    }
+    <div class="button-row">
+        <button type="button" class="btn btn-sm btn-primary" @onclick="OnSend">Send EIB Frame</button>
+        <button type="button" class="btn btn-sm btn-outline-secondary" @onclick="OnClose">@T("blabel.close")</button>
+    </div>
+</DialogFrame>

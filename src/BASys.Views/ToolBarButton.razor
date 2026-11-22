@@ -1,0 +1,5 @@
+@inherits ObservingComponentBase
+
+<button type="button" class="toolbar-button @ColorClass" disabled="@(!IsEnabled)" title="@ToolTip" @onclick="OnClick">
+    <Icon Name="@Icon" Size="18" />
+</button>

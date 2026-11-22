@@ -1,0 +1,29 @@
+@inherits ObservingComponentBase
+
+<div class="tree-node">
+    <div class="tree-row @(Node.IsSelected ? "selected" : string.Empty)"
+         @onclick="OnSelect"
+         @ondblclick="OnStartEdit"
+         @oncontextmenu="OnContextMenu" @oncontextmenu:preventDefault="true"
+         data-drop-target="@(DragState.DraggedItem.HasValue ? _targetId : null)">
+        <span class="tree-toggle" @onclick="OnToggle" @onclick:stopPropagation="true">@GetToggleSymbol()</span>
+        <Icon Name="@Node.IconName" CssClass="@("icon-node-" + Node.NodeType.ToString().ToLowerInvariant())" />
+        @if (_isEditing)
+        {
+            <input class="tree-edit" @bind="EditName" @bind:event="oninput" @onkeydown="OnEditKeyDown" @onkeydown:stopPropagation="true" @onblur="OnEndEdit" @onclick:stopPropagation="true" />
+        }
+        else
+        {
+            <span class="tree-name">@Node.Name</span>
+        }
+    </div>
+    @if (Node.IsExpanded && Node.Children.Count > 0)
+    {
+        <div class="tree-children">
+            @foreach (ArchitecturalNodeViewModel currentChild in Node.Children)
+            {
+                <TreeNode @key="currentChild" Node="currentChild" Project="Project" Main="Main" OnContextMenuRequested="OnContextMenuRequested" />
+            }
+        </div>
+    }
+</div>

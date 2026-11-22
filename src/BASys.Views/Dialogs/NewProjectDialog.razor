@@ -1,0 +1,16 @@
+@inherits ObservingComponentBase
+
+<DialogFrame Title="@ViewModel.Title" Width="460px">
+    <div class="form-row">
+        <label>@T("l.newProjectName")</label>
+        <input type="text" class="form-control form-control-sm" @ref="_focusElement" @bind="ProjectName" @bind:event="oninput" />
+    </div>
+    <div class="form-row">
+        <label>@T("l.busSystemPrefferd")</label>
+        <EnumRadioGroup TEnum="BusSystem" Values="_busSystems" @bind-Value="BusSystem" TextProvider="GetBusSystemText" />
+    </div>
+    <div class="button-row">
+        <button type="button" class="btn btn-sm btn-primary" disabled="@(!ViewModel.CreateCommand.CanExecute(null))" @onclick="OnCreate">@T("blabel.newProject")</button>
+        <button type="button" class="btn btn-sm btn-outline-secondary" @onclick="OnCancel">@T("blabel.cancel")</button>
+    </div>
+</DialogFrame>

@@ -1,0 +1,61 @@
+@inherits ObservingComponentBase
+
+<CascadingValue Value="_state">
+    @if (_state.OpenMenuId != null)
+    {
+        <div class="menu-overlay" @onclick="CloseMenus"></div>
+    }
+    <div class="menubar">
+        <MenuDropDown Id="file" Title="@T("m.file")">
+            <MenuItemView Text="@T("mi.newproject")" Command="ViewModel.NewProjectCommand" />
+            <MenuItemView IsSeparator="true" />
+            <MenuItemView Text="@T("mi.openproject")" Command="ViewModel.OpenProjectCommand" />
+            <MenuItemView Text="@T("mi.closeproject")" Command="ViewModel.CloseProjectCommand" />
+            <MenuItemView IsSeparator="true" />
+            <MenuItemView Text="@T("mi.save")" Shortcut="Ctrl+S" Command="ViewModel.SaveCommand" />
+            <MenuItemView Text="@T("mi.saveas")" Command="ViewModel.SaveAsCommand" />
+            <MenuItemView IsSeparator="true" />
+            <MenuItemView Text="@T("mi.print")" Shortcut="Ctrl+P" Command="ViewModel.PrintCommand" />
+            <MenuItemView IsSeparator="true" />
+            <MenuItemView Text="@T("mi.exit")" Shortcut="Alt+F4" Command="ViewModel.ExitCommand" />
+        </MenuDropDown>
+        <MenuDropDown Id="edit" Title="@T("m.edit")">
+            <MenuItemView Text="@T("mi.undo")" Shortcut="Ctrl+Z" Command="ViewModel.UndoCommand" />
+            <MenuItemView Text="@T("mi.redo")" Shortcut="Ctrl+Y" Command="ViewModel.RedoCommand" />
+            <MenuItemView IsSeparator="true" />
+            <MenuItemView Text="@T("mi.cut")" Shortcut="Ctrl+X" Command="ViewModel.CutCommand" />
+            <MenuItemView Text="@T("mi.copy")" Shortcut="Ctrl+C" Command="ViewModel.CopyCommand" />
+            <MenuItemView Text="@T("mi.paste")" Shortcut="Ctrl+V" Command="ViewModel.PasteCommand" />
+            <MenuItemView Text="@T("mi.delete")" Shortcut="Del" Command="ViewModel.DeleteCommand" />
+        </MenuDropDown>
+        <MenuDropDown Id="commissioning" Title="@T("m.commissioning")">
+            <MenuItemView Text="@T("mi.programEIB")" Command="ViewModel.ProgramEibDevicesCommand" />
+        </MenuDropDown>
+        <MenuDropDown Id="diagnostic" Title="@T("m.diagnostic")">
+            <MenuItemView Text="@T("mi.openTelegramtracer")" Command="ViewModel.OpenBusMonitorCommand" />
+            <MenuItemView Text="@T("mi.openEIBTelegramDialog")" Command="ViewModel.OpenTelegramDialogCommand" />
+            <MenuItemView IsSeparator="true" />
+            <MenuItemView IsHeader="true" Text="@T("mi.gatewaytypeEIB")" />
+            <MenuItemView Text="@T("mi.gatewayKNXnetIP")" Command="ViewModel.SelectGatewayCommand" CommandParameter="@GatewayType.KnxNetIp"
+                          IsChecked="@(ViewModel.SelectedGateway == GatewayType.KnxNetIp)" ForceDisabled="@(!ViewModel.CanSelectGateway)" />
+            <MenuItemView Text="@T("mi.gatewayEIBDarmstadt")" Command="ViewModel.SelectGatewayCommand" CommandParameter="@GatewayType.Darmstadt"
+                          IsChecked="@(ViewModel.SelectedGateway == GatewayType.Darmstadt)" ForceDisabled="@(!ViewModel.CanSelectGateway)" />
+            <MenuItemView Text="@T("mi.gatewayEIBLinuxBCU1")" Command="ViewModel.SelectGatewayCommand" CommandParameter="@GatewayType.LinuxBcu1"
+                          IsChecked="@(ViewModel.SelectedGateway == GatewayType.LinuxBcu1)" ForceDisabled="true" />
+            <MenuItemView IsSeparator="true" />
+            <MenuItemView Text="@T("mi.stopEIBGateway")" Command="ViewModel.StopGatewayCommand" />
+            <MenuItemView Text="@T("mi.startEIBGateway")" Command="ViewModel.StartGatewayCommand" />
+        </MenuDropDown>
+        <div class="menu-dropdown">
+            <div class="menu-title disabled">@T("m.test")</div>
+        </div>
+        <MenuDropDown Id="data" Title="@T("m.data")">
+            <MenuItemView Text="@T("mi.convertvd")" Command="ViewModel.NotImplementedCommand" />
+            <MenuItemView Text="@T("mi.makeeibdata")" Command="ViewModel.EditEibDataCommand" />
+        </MenuDropDown>
+        <MenuDropDown Id="help" Title="@T("m.help")">
+            <MenuItemView Text="@T("mi.language")" Command="ViewModel.SelectLanguageCommand" />
+            <MenuItemView Text="@T("mi.about")" Command="ViewModel.AboutCommand" />
+        </MenuDropDown>
+    </div>
+</CascadingValue>

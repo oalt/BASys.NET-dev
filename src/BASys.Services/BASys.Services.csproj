@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BASys.DataModels\BASys.DataModels.csproj" />
+    <ProjectReference Include="..\BASys.DataAccess\BASys.DataAccess.csproj" />
+    <ProjectReference Include="..\BASys.Resources\BASys.Resources.csproj" />
+    <ProjectReference Include="..\knx.net\src\KNXLib\KNXLib.csproj" />
+  </ItemGroup>
+
+</Project>

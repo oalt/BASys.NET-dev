@@ -1,0 +1,16 @@
+@inherits ObservingComponentBase
+
+<div class="project-view">
+    <div class="tree-pane">
+        <ArchitecturalTree Project="Project" Main="Main" OnContextMenuRequested="OnContextMenuRequested" />
+    </div>
+    <div class="view-pane">
+        <ul class="nav nav-tabs px-2 pt-1 tab-header">
+            <li class="nav-item"><span class="nav-link active py-1">@T("tabname.structural")</span></li>
+        </ul>
+        <div class="tab-body">
+            <StructuralView Project="Project" Main="Main" OnContextMenuRequested="OnContextMenuRequested" />
+        </div>
+    </div>
+</div>
+<ContextMenu Main="Main" Request="_contextMenuRequest" OnClosed="OnContextMenuClosed" />

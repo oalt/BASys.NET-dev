@@ -1,0 +1,9 @@
+@inherits ObservingComponentBase
+
+<tr class="@(IsSelected ? "selected" : string.Empty)" @onclick="OnClick">
+    <td>@Device.Manufacturer</td>
+    <td>@Device.Product</td>
+    <td>@Localizer.GetName(Device.DeviceKind)</td>
+    <td>@Device.Application</td>
+    <td>@Localizer.GetName(Device.Location)</td>
+</tr>

@@ -1,0 +1,19 @@
+@inherits ObservingComponentBase
+
+@if (Request != null)
+{
+    <div class="menu-overlay" @onclick="OnClose" @oncontextmenu="OnClose" @oncontextmenu:preventDefault="true"></div>
+    <div class="menu-popup context-menu" style="left:@(Request.X.ToString(System.Globalization.CultureInfo.InvariantCulture))px; top:@(Request.Y.ToString(System.Globalization.CultureInfo.InvariantCulture))px">
+        @foreach (PaletteItemType currentItem in _items)
+        {
+            <ContextMenuEntry Text="@GetText(currentItem)" Item="currentItem" Target="Request.Target" Main="Main" OnExecuted="OnClose" />
+        }
+        <div class="menu-separator"></div>
+        <div class="menu-item disabled"><span class="menu-check"></span><span class="menu-text">@T("mi.cut")</span></div>
+        <div class="menu-item disabled"><span class="menu-check"></span><span class="menu-text">@T("mi.copy")</span></div>
+        <div class="menu-item disabled"><span class="menu-check"></span><span class="menu-text">@T("mi.paste")</span></div>
+        <div class="menu-item @(Main.DeleteCommand.CanExecute(null) ? string.Empty : "disabled")" @onclick="OnDelete">
+            <span class="menu-check"></span><span class="menu-text">@T("mi.delete")</span>
+        </div>
+    </div>
+}

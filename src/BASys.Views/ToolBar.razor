@@ -1,0 +1,22 @@
+@inherits ObservingComponentBase
+
+<div class="toolbar">
+    <ToolBarButton Icon="file-earmark-plus" ColorClass="icon-primary" ToolTip="@T("mi.newproject")" Command="ViewModel.NewProjectCommand" />
+    <span class="toolbar-separator"></span>
+    <ToolBarButton Icon="folder2-open" ColorClass="icon-warning" ToolTip="@T("mi.openproject")" Command="ViewModel.OpenProjectCommand" />
+    <ToolBarButton Icon="x-square" ToolTip="@T("mi.closeproject")" Command="ViewModel.CloseProjectCommand" />
+    <span class="toolbar-separator"></span>
+    <ToolBarButton Icon="save" ColorClass="icon-primary" ToolTip="@T("mi.save")" Command="ViewModel.SaveCommand" />
+    <ToolBarButton Icon="save2" ColorClass="icon-primary" ToolTip="@T("mi.saveas")" Command="ViewModel.SaveAsCommand" />
+    <span class="toolbar-separator"></span>
+    <ToolBarButton Icon="arrow-counterclockwise" ToolTip="@T("mi.undo")" Command="ViewModel.UndoCommand" />
+    <ToolBarButton Icon="arrow-clockwise" ToolTip="@T("mi.redo")" Command="ViewModel.RedoCommand" />
+    <span class="toolbar-separator"></span>
+    <ToolBarButton Icon="scissors" ToolTip="@T("mi.cut")" Command="ViewModel.CutCommand" />
+    <ToolBarButton Icon="files" ToolTip="@T("mi.copy")" Command="ViewModel.CopyCommand" />
+    <ToolBarButton Icon="clipboard" ToolTip="@T("mi.paste")" Command="ViewModel.PasteCommand" />
+    <ToolBarButton Icon="trash3" ColorClass="icon-danger" ToolTip="@T("mi.delete")" Command="ViewModel.DeleteCommand" />
+    <ToolBarButton Icon="printer" ToolTip="@T("mi.print")" Command="ViewModel.PrintCommand" />
+    <span class="toolbar-separator"></span>
+    <ToolBarButton Icon="power" ColorClass="icon-danger" ToolTip="@T("mi.exit")" Command="ViewModel.ExitCommand" />
+</div>

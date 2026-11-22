@@ -1,0 +1,91 @@
+@inherits ObservingComponentBase
+
+<DialogFrame Title="@ViewModel.Title" Width="900px">
+    <div class="three-columns">
+        <fieldset>
+            <legend>@T("l.manufacturerfile")</legend>
+            @if (ViewModel.ManufacturerFiles.Count == 0)
+            {
+                <div class="hint-small">@T("l.noManufacturerFiles")</div>
+            }
+            else
+            {
+                <ListBox TItem="string" Items="ViewModel.ManufacturerFiles" @bind-SelectedItem="ViewModel.SelectedManufacturerFile"
+                         TextProvider="GetFileText" />
+            }
+        </fieldset>
+        <fieldset>
+            <legend>@T("l.product")</legend>
+            <ListBox TItem="EibProduct" Items="ViewModel.Products" @bind-SelectedItem="ViewModel.SelectedProduct"
+                     TextProvider="GetProductText" />
+        </fieldset>
+        <fieldset>
+            <legend>@T("l.application")</legend>
+            <ListBox TItem="EibApplication" Items="ViewModel.Applications" @bind-SelectedItem="ViewModel.SelectedApplication"
+                     TextProvider="GetApplicationText" />
+        </fieldset>
+    </div>
+    @if (ViewModel.IsBusy)
+    {
+        <div class="progress busy-bar"><div class="progress-bar progress-bar-striped progress-bar-animated w-100">@T("l.loading")</div></div>
+    }
+    <fieldset>
+        <legend>@T("l.devtype")</legend>
+        <EnumRadioGroup TEnum="EibDeviceKind" Values="_deviceKinds" @bind-Value="DeviceKind" TextProvider="GetDeviceKindText" />
+    </fieldset>
+    <fieldset>
+        <legend>@T("l.il")</legend>
+        <EnumRadioGroup TEnum="InstallationLocation" Values="_locations" @bind-Value="Location" TextProvider="GetLocationText" />
+    </fieldset>
+    <fieldset>
+        <legend>@T("l.comobjects")</legend>
+        <div class="grid-container">
+            <table class="table table-sm table-bordered table-hover grid mb-0">
+                <thead>
+                    <tr>
+                        <th>@T("tc.nr")</th>
+                        <th>@T("tc.name")</th>
+                        <th>@T("tc.funcname")</th>
+                        <th>@T("tc.eis")</th>
+                        <th>@T("tc.func")</th>
+                        <th>@T("tc.funcgroups")</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (ComObjectRowViewModel currentRow in ViewModel.ComObjects)
+                    {
+                        <ComObjectRow @key="currentRow" Row="currentRow" Dialog="ViewModel" />
+                    }
+                </tbody>
+            </table>
+        </div>
+    </fieldset>
+    <div class="button-row">
+        <button type="button" class="btn btn-sm btn-outline-secondary" disabled="@(!ViewModel.SetFunctionGroupCommand.CanExecute(null))" @onclick="OnSetFunctionGroup">@T("blabel.setFunctionGroup")</button>
+        <button type="button" class="btn btn-sm btn-primary" disabled="@(!ViewModel.AddDeviceCommand.CanExecute(null))" @onclick="OnAddDevice">@T("blabel.addDevice")</button>
+    </div>
+    <div class="grid-container">
+        <table class="table table-sm table-bordered table-hover grid mb-0">
+            <thead>
+                <tr>
+                    <th>@T("tc.manu")</th>
+                    <th>@T("tc.prod")</th>
+                    <th>@T("l.devtype")</th>
+                    <th>@T("tc.app")</th>
+                    <th>@T("l.il")</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (DatabaseDeviceRowViewModel currentDevice in ViewModel.DatabaseDevices)
+                {
+                    <DatabaseDeviceRow @key="currentDevice" Device="currentDevice" Dialog="ViewModel" />
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="button-row">
+        <button type="button" class="btn btn-sm btn-outline-secondary" @onclick="OnClose">@T("blabel.close")</button>
+        <button type="button" class="btn btn-sm btn-outline-secondary" disabled="true">@T("blabel.modifyFunctions")</button>
+        <button type="button" class="btn btn-sm btn-outline-secondary" disabled="@(!ViewModel.DeleteCommand.CanExecute(null))" @onclick="OnDelete">@T("blabel.delete")</button>
+    </div>
+</DialogFrame>

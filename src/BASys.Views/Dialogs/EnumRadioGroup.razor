@@ -1,0 +1,11 @@
+@typeparam TEnum where TEnum : struct, Enum
+
+<div class="radio-group">
+    @foreach (TEnum currentValue in Values)
+    {
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" id="@(_groupName + currentValue)" name="@_groupName" value="@currentValue" checked="@Value.Equals(currentValue)" @onchange="OnChanged" />
+            <label class="form-check-label" for="@(_groupName + currentValue)">@GetText(currentValue)</label>
+        </div>
+    }
+</div>

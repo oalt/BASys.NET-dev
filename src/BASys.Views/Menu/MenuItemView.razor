@@ -1,0 +1,18 @@
+@inherits ObservingComponentBase
+
+@if (IsSeparator)
+{
+    <div class="menu-separator"></div>
+}
+else if (IsHeader)
+{
+    <div class="menu-header">@Text</div>
+}
+else
+{
+    <div class="menu-item @(IsEnabled ? string.Empty : "disabled")" @onclick="OnClick">
+        <span class="menu-check">@(IsChecked ? "●" : string.Empty)</span>
+        <span class="menu-text">@Text</span>
+        <span class="menu-shortcut">@Shortcut</span>
+    </div>
+}

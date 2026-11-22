@@ -1,0 +1,6 @@
+[submodule "java/basys2003"]
+	path = java/basys2003
+	url = https://github.com/oalt/basys2003.git
+[submodule "src/knx.net"]
+	path = src/knx.net
+	url = https://github.com/oalt/knx.net.git

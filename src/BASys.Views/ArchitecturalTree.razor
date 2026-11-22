@@ -1,0 +1,5 @@
+@inherits ObservingComponentBase
+
+<div class="tree" @oncontextmenu="OnBackgroundContextMenu" @oncontextmenu:preventDefault="true">
+    <TreeNode Node="Project.RootNode" Project="Project" Main="Main" OnContextMenuRequested="OnContextMenuRequested" />
+</div>

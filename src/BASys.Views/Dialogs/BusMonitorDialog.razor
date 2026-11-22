@@ -1,0 +1,44 @@
+@inherits ObservingComponentBase
+
+<DialogFrame Title="@ViewModel.Title" Width="1000px">
+    <div class="grid-container monitor">
+        <table class="table table-sm table-bordered table-hover grid mb-0">
+            <thead>
+                <tr>
+                    <th>@T("tc.priority")</th>
+                    <th>@T("tc.repeat")</th>
+                    <th>@T("tc.sourceAddr")</th>
+                    <th>@T("tc.destAddr")</th>
+                    <th>@T("tc.RC")</th>
+                    <th>@T("tc.TPCI")</th>
+                    <th>@T("tc.APCI")</th>
+                    <th>@T("tc.data")</th>
+                    <th>@T("tc.parity")</th>
+                    <th>@T("tc.ack")</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (BusMonitorRowViewModel currentRow in ViewModel.Rows)
+                {
+                    <tr @key="currentRow">
+                        <td>@currentRow.Priority</td>
+                        <td><input type="checkbox" class="form-check-input" checked="@currentRow.Repeat" disabled /></td>
+                        <td>@currentRow.SourceAddress</td>
+                        <td>@currentRow.GetDestinationAddress(ViewModel.IsTwoLevelGroup)</td>
+                        <td>@currentRow.RoutingCounter</td>
+                        <td>@currentRow.Tpci</td>
+                        <td>@currentRow.Apci</td>
+                        <td>@currentRow.Data</td>
+                        <td>@currentRow.Parity</td>
+                        <td>@currentRow.Acknowledge</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="button-row">
+        <label class="form-check-label me-auto"><input type="checkbox" class="form-check-input me-1" @bind="IsTwoLevelGroup" />2-level group addresses</label>
+        <button type="button" class="btn btn-sm btn-outline-secondary" @onclick="OnClear">@T("blabel.clearData")</button>
+        <button type="button" class="btn btn-sm btn-outline-secondary" @onclick="OnClose">@T("blabel.close")</button>
+    </div>
+</DialogFrame>

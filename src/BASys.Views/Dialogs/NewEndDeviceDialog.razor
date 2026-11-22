@@ -1,0 +1,28 @@
+@inherits ObservingComponentBase
+
+<DialogFrame Title="@ViewModel.Title" Width="560px">
+    <div class="device-dialog">
+        <Icon Name="@ViewModel.IconName" Size="32" CssClass="icon-device" />
+        <div class="device-dialog-form">
+            <div class="form-row">
+                <label>@T("mess.inputname")</label>
+                <input type="text" class="form-control form-control-sm" @ref="_focusElement" @bind="DeviceName" @bind:event="oninput" />
+            </div>
+            <div class="form-row">
+                <label>@T("mess.selectInstallLocation")</label>
+                <EnumRadioGroup TEnum="InstallationLocation" Values="_locations" @bind-Value="Location" TextProvider="GetLocationText" />
+            </div>
+            @if (ViewModel.ShowBusSystemChoice)
+            {
+                <div class="form-row">
+                    <label>@T("l.chooseBusSystem")</label>
+                    <EnumRadioGroup TEnum="BusSystem" Values="_busSystems" @bind-Value="BusSystem" TextProvider="GetBusSystemText" />
+                </div>
+            }
+        </div>
+    </div>
+    <div class="button-row">
+        <button type="button" class="btn btn-sm btn-primary" disabled="@(!ViewModel.OkCommand.CanExecute(null))" @onclick="OnOk">@T("blabel.ok")</button>
+        <button type="button" class="btn btn-sm btn-outline-secondary" @onclick="OnCancel">@T("blabel.cancel")</button>
+    </div>
+</DialogFrame>

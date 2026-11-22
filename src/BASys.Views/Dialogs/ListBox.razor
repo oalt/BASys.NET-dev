@@ -1,0 +1,8 @@
+@typeparam TItem where TItem : class
+
+<select class="form-select form-select-sm listbox" size="@Size" @onchange="OnChanged">
+    @for (int index = 0; index < Items.Count; index++)
+    {
+        <option value="@index" selected="@(ReferenceEquals(Items[index], SelectedItem))">@TextProvider(Items[index])</option>
+    }
+</select>

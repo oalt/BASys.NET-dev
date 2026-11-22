@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+<resheader name="version"><value>2.0</value></resheader>
+<resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+<resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+<data name="blabel.addDevice" xml:space="preserve"><value>Gerät zur Datenbasis hinzufügen</value></data>
+<data name="blabel.cancel" xml:space="preserve"><value>Abbrechen</value></data>
+<data name="blabel.cancelProgramming" xml:space="preserve"><value>Programmierung abbrechen</value></data>
+<data name="blabel.clearData" xml:space="preserve"><value>Daten löschen</value></data>
+<data name="blabel.close" xml:space="preserve"><value>Schließen</value></data>
+<data name="blabel.continue" xml:space="preserve"><value>Weiter</value></data>
+<data name="blabel.delete" xml:space="preserve"><value>Löschen</value></data>
+<data name="blabel.modifyFunctions" xml:space="preserve"><value>Gerätefunktionen bearbeiten</value></data>
+<data name="blabel.newProject" xml:space="preserve"><value>Projekt anlegen</value></data>
+<data name="blabel.no" xml:space="preserve"><value>Nein</value></data>
+<data name="blabel.ok" xml:space="preserve"><value>OK</value></data>
+<data name="blabel.programAll" xml:space="preserve"><value>Alles Programmieren</value></data>
+<data name="blabel.programSelected" xml:space="preserve"><value>Ausgewählte Geräte programmieren</value></data>
+<data name="blabel.setFunctionGroup" xml:space="preserve"><value>Funktionsgruppe festlegen</value></data>
+<data name="blabel.yes" xml:space="preserve"><value>Ja</value></data>
+<data name="km.newbuilding" xml:space="preserve"><value>Neues Gebäude</value></data>
+<data name="km.newdimlamp" xml:space="preserve"><value>Neue dimmbare Lampe</value></data>
+<data name="km.newfloor" xml:space="preserve"><value>Neues Stockwerk</value></data>
+<data name="km.newjal" xml:space="preserve"><value>Neue Jalousie</value></data>
+<data name="km.newjunctionbox" xml:space="preserve"><value>Neuer Verteiler</value></data>
+<data name="km.newlamp" xml:space="preserve"><value>Neue schaltbare Lampe</value></data>
+<data name="km.newroom" xml:space="preserve"><value>Neuer Raum</value></data>
+<data name="km.newsensor" xml:space="preserve"><value>Neuer Sensor</value></data>
+<data name="km.newvalve" xml:space="preserve"><value>Neues Ventil</value></data>
+<data name="l.about.copyright" xml:space="preserve"><value>(c) 2003 Oliver Alt</value></data>
+<data name="l.about.description" xml:space="preserve"><value>Softwaresystem für Gebäudeautomationssysteme</value></data>
+<data name="l.about.version" xml:space="preserve"><value>Version</value></data>
+<data name="l.actuator" xml:space="preserve"><value>Aktor</value></data>
+<data name="l.all" xml:space="preserve"><value>Gesamter Vorgang</value></data>
+<data name="l.application" xml:space="preserve"><value>Applikation</value></data>
+<data name="l.building" xml:space="preserve"><value>Gebäude</value></data>
+<data name="l.buildings" xml:space="preserve"><value>Gebäude</value></data>
+<data name="l.bus.eib" xml:space="preserve"><value>EIB</value></data>
+<data name="l.bus.lcn" xml:space="preserve"><value>LCN</value></data>
+<data name="l.bus.lon" xml:space="preserve"><value>LON</value></data>
+<data name="l.busSystemPrefferd" xml:space="preserve"><value>Bitte wählen Sie das bevorzugte Bussystem aus:</value></data>
+<data name="l.busdevices" xml:space="preserve"><value>Busgeräte</value></data>
+<data name="l.bussystem" xml:space="preserve"><value>Bussystem</value></data>
+<data name="l.chooseBusSystem" xml:space="preserve"><value>Bitte Bussystem auswählen</value></data>
+<data name="l.comobjects" xml:space="preserve"><value>EIB Kommunikationsobjekte</value></data>
+<data name="l.defaultDevice" xml:space="preserve"><value>Neues Gerät</value></data>
+<data name="l.device" xml:space="preserve"><value>Gerät</value></data>
+<data name="l.devtype" xml:space="preserve"><value>Geräteart</value></data>
+<data name="l.dimlamp" xml:space="preserve"><value>Dimmbare Lampe</value></data>
+<data name="l.floor" xml:space="preserve"><value>Stockwerk</value></data>
+<data name="l.floors" xml:space="preserve"><value>Stockwerke</value></data>
+<data name="l.il" xml:space="preserve"><value>Installationsort</value></data>
+<data name="l.ilByDevice" xml:space="preserve"><value>Busankoppler im Gerät integriert</value></data>
+<data name="l.ilKI" xml:space="preserve"><value>Kanaleinbaugerät</value></data>
+<data name="l.ilREG" xml:space="preserve"><value>REG-Gerät</value></data>
+<data name="l.ilUP" xml:space="preserve"><value>UP-Gerät</value></data>
+<data name="l.installedComponents" xml:space="preserve"><value>Installierte Geräte</value></data>
+<data name="l.jal" xml:space="preserve"><value>Jalousie</value></data>
+<data name="l.junctionbox" xml:space="preserve"><value>Verteilerkasten</value></data>
+<data name="l.junctionbox.name" xml:space="preserve"><value>Verteilerkasten</value></data>
+<data name="l.junctionboxes" xml:space="preserve"><value>Verteilerkästen</value></data>
+<data name="l.lamp" xml:space="preserve"><value>Schaltbare Lampe</value></data>
+<data name="l.language" xml:space="preserve"><value>Bitte Sprache auswählen</value></data>
+<data name="l.loading" xml:space="preserve"><value>Daten werden gelesen...</value></data>
+<data name="l.manufacturerfile" xml:space="preserve"><value>Herstellerdatenbank</value></data>
+<data name="l.newProjectName" xml:space="preserve"><value>Bitte geben Sie einen Namen für das neue Projekt an:</value></data>
+<data name="l.noBusSystemPreffered" xml:space="preserve"><value>kein bevorzugtes Bussystem</value></data>
+<data name="l.noManufacturerFiles" xml:space="preserve"><value>Keine Herstellerdaten gefunden. Bitte zuerst im Menü Datenverwaltung ETS-Produktdaten konvertieren oder XML-Dateien in den Ordner global-data/eib/devicedata kopieren.</value></data>
+<data name="l.noSelection" xml:space="preserve"><value>Bitte wählen Sie einen Raum im Projektbaum aus.</value></data>
+<data name="l.phAddrOnly" xml:space="preserve"><value>Nur Physikalische Adresse</value></data>
+<data name="l.product" xml:space="preserve"><value>Produkt</value></data>
+<data name="l.project" xml:space="preserve"><value>Projekt</value></data>
+<data name="l.room" xml:space="preserve"><value>Raum</value></data>
+<data name="l.rooms" xml:space="preserve"><value>Räume</value></data>
+<data name="l.sensor" xml:space="preserve"><value>Sensor</value></data>
+<data name="l.valve" xml:space="preserve"><value>Ventil</value></data>
+<data name="m.commissioning" xml:space="preserve"><value>Inbetriebnahme</value></data>
+<data name="m.data" xml:space="preserve"><value>Datenverwaltung</value></data>
+<data name="m.diagnostic" xml:space="preserve"><value>EIB Diagnose</value></data>
+<data name="m.edit" xml:space="preserve"><value>Bearbeiten</value></data>
+<data name="m.file" xml:space="preserve"><value>Datei</value></data>
+<data name="m.help" xml:space="preserve"><value>Hilfe</value></data>
+<data name="m.planing" xml:space="preserve"><value>Planung</value></data>
+<data name="m.tableaus" xml:space="preserve"><value>Tableaus</value></data>
+<data name="m.test" xml:space="preserve"><value>Test</value></data>
+<data name="mess.addressIsInUse" xml:space="preserve"><value>Adresse wird bereits von einem anderen Gerät verwendet !</value></data>
+<data name="mess.appProgError" xml:space="preserve"><value>Fehler beim Programmieren der Applikation.
+Erneut versuchen ?</value></data>
+<data name="mess.busNotSupported" xml:space="preserve"><value>Das Bussystem wird nicht unterstützt !</value></data>
+<data name="mess.conversionDone" xml:space="preserve"><value>Die Produktdaten wurden konvertiert:</value></data>
+<data name="mess.devInProjectFound" xml:space="preserve"><value>Es wurden passende, bereits installierte Geräte gefunden.
+Möchten Sie dieses Gerät verwenden ?</value></data>
+<data name="mess.exitConfirm" xml:space="preserve"><value>Möchten Sie BASys 2003 wirklich beenden?</value></data>
+<data name="mess.inputPhAddr" xml:space="preserve"><value>Bitte geben Sie die Physikalische EIB Geräteadresse an !</value></data>
+<data name="mess.inputXMLname" xml:space="preserve"><value>Geben Sie einen Namen für die XML-Datei an !</value></data>
+<data name="mess.inputname" xml:space="preserve"><value>Bitte geben Sie einen Namen an !!</value></data>
+<data name="mess.multiProgramButton" xml:space="preserve"><value>Es sind mehrere Geräte im Programmiermodus !</value></data>
+<data name="mess.noDevForSensor" xml:space="preserve"><value>Es wurden keine zu steuernden Geräte gefunden.
+Legen Sie zunächst die Geräte an !</value></data>
+<data name="mess.noDeviceFound" xml:space="preserve"><value>Es wurde kein passendes Busgerät gefunden.
+Bitte erweitern Sie die Datenbasis !</value></data>
+<data name="mess.noEIBConnection" xml:space="preserve"><value>Konnte keine Verbindung zum EIB herstellen !</value></data>
+<data name="mess.noEIBConnectionAvaliable" xml:space="preserve"><value>Es konnte keine Verbindung zum EIB hergestellt werden.
+Überprüfen Sie die Einstellungen der Busverbindung.</value></data>
+<data name="mess.noEIBConnectionPossible" xml:space="preserve"><value>Es konnte keine Verbindung zum EIB hergestellt werden.
+Vermutlich ist bereis eine geöffnet.</value></data>
+<data name="mess.noJunctionBoxesFonund" xml:space="preserve"><value>Es wurden keine Schaltkästen gefunden !
+Bitte legen Sie zuerst einen an !!</value></data>
+<data name="mess.nodevicesToProgram" xml:space="preserve"><value>Keine Geräte zum Programmieren vorhanden.</value></data>
+<data name="mess.notImplemented" xml:space="preserve"><value>Diese Funktion ist im Mockup noch nicht verfügbar.</value></data>
+<data name="mess.phAddrInUse" xml:space="preserve"><value>Physikalische Addresse bereits vergeben !
+Bitte neue Addresse eingeben.</value></data>
+<data name="mess.phAddrTimeout" xml:space="preserve"><value>Innerhalb der letzten 10 Sekunden wurde kein Programmiertaster gedrückt.
+Programmierung wiederholen ?</value></data>
+<data name="mess.progEnd" xml:space="preserve"><value>Programmierungsvorgang abgeschlossen.</value></data>
+<data name="mess.progStart" xml:space="preserve"><value>Programmierung gestartet...</value></data>
+<data name="mess.saveChanges" xml:space="preserve"><value>Wollen Sie ihre Änderungen speichern ?</value></data>
+<data name="mess.saved" xml:space="preserve"><value>Projekt gespeichert:</value></data>
+<data name="mess.selectBuilding" xml:space="preserve"><value>Bitte wählen Sie zuerst ein Gebäude aus.</value></data>
+<data name="mess.selectFloor" xml:space="preserve"><value>Bitte wählen Sie zuerst ein Stockwerk aus.</value></data>
+<data name="mess.selectInstallLocation" xml:space="preserve"><value>Bitte wählen Sie den Installationsort des Aktors aus !</value></data>
+<data name="mess.selectRoom" xml:space="preserve"><value>Bitte wählen Sie zuerst einen Raum aus.</value></data>
+<data name="mess.stopProg" xml:space="preserve"><value>Programmierung abgebrochen !</value></data>
+<data name="mess.welcome" xml:space="preserve"><value>BASys 2003 wurde zum ersten mal gestartet.
+Die benötigte Verzeichnisstruktur wurde angelegt
+Pfad:</value></data>
+<data name="mess.wrongManu" xml:space="preserve"><value>Applikation passt nicht zum Gerätehersteller !</value></data>
+<data name="mess.wrongMask" xml:space="preserve"><value>Falsche Maskenversion !</value></data>
+<data name="mess.wrongPhAddrFormat" xml:space="preserve"><value>Falsches Adressenformat, bitte richtige Adresse eingeben !</value></data>
+<data name="mess.wrongProjectPath" xml:space="preserve"><value>Kein gültiger Projekt Pfad !</value></data>
+<data name="mi.about" xml:space="preserve"><value>Über BASys 2003...</value></data>
+<data name="mi.closeproject" xml:space="preserve"><value>Projekt schliessen</value></data>
+<data name="mi.convertvd" xml:space="preserve"><value>ETS Produktdaten nach XML konvertieren</value></data>
+<data name="mi.copy" xml:space="preserve"><value>Kopieren</value></data>
+<data name="mi.cut" xml:space="preserve"><value>Ausschneiden</value></data>
+<data name="mi.delete" xml:space="preserve"><value>Löschen</value></data>
+<data name="mi.exit" xml:space="preserve"><value>Programm beenden</value></data>
+<data name="mi.gatewayEIBDarmstadt" xml:space="preserve"><value>Gateway TU-Darmstadt (Ethernet)</value></data>
+<data name="mi.gatewayEIBLinuxBCU1" xml:space="preserve"><value>Linux BCU1 Serielle Verbindung (/dev/eib)</value></data>
+<data name="mi.gatewayKNXnetIP" xml:space="preserve"><value>KNXnet/IP (EIBnet/IP) Tunnelling-Verbindung</value></data>
+<data name="mi.gatewaytypeEIB" xml:space="preserve"><value>EIB Gateway:</value></data>
+<data name="mi.language" xml:space="preserve"><value>Sprache...</value></data>
+<data name="mi.makeeibdata" xml:space="preserve"><value>EIB Grunddaten erstellen/bearbeiten</value></data>
+<data name="mi.newproject" xml:space="preserve"><value>Neues Projekt</value></data>
+<data name="mi.openEIBTelegramDialog" xml:space="preserve"><value>EIB Telegrammdialog öffnen</value></data>
+<data name="mi.openTelegramtracer" xml:space="preserve"><value>Tabellarischen EIB Busmonitor anzeigen</value></data>
+<data name="mi.openproject" xml:space="preserve"><value>Projekt öffnen</value></data>
+<data name="mi.paste" xml:space="preserve"><value>Einfügen</value></data>
+<data name="mi.print" xml:space="preserve"><value>Drucken</value></data>
+<data name="mi.programEIB" xml:space="preserve"><value>EIB Geräte programmieren</value></data>
+<data name="mi.redo" xml:space="preserve"><value>Wiederherstellen</value></data>
+<data name="mi.save" xml:space="preserve"><value>Speichern</value></data>
+<data name="mi.saveas" xml:space="preserve"><value>Speichern unter...</value></data>
+<data name="mi.startEIBGateway" xml:space="preserve"><value>EIB Verbindung öffnen</value></data>
+<data name="mi.stopEIBGateway" xml:space="preserve"><value>EIB Verbindung stoppen</value></data>
+<data name="mi.undo" xml:space="preserve"><value>Wiederrufen</value></data>
+<data name="noname" xml:space="preserve"><value>unbenannt</value></data>
+<data name="st.addressProgrammed" xml:space="preserve"><value>Adresse programmiert</value></data>
+<data name="st.programmed" xml:space="preserve"><value>programmiert</value></data>
+<data name="st.unprogrammed" xml:space="preserve"><value>unprogrammiert</value></data>
+<data name="stat.actualDevice" xml:space="preserve"><value>Bearbeitetes Gerät:</value></data>
+<data name="stat.converting" xml:space="preserve"><value>Produktdaten werden konvertiert...</value></data>
+<data name="stat.gatewayStarted" xml:space="preserve"><value>EIB Verbindung geöffnet:</value></data>
+<data name="stat.gatewayStopped" xml:space="preserve"><value>EIB Verbindung gestoppt.</value></data>
+<data name="stat.phAddr" xml:space="preserve"><value>, Programmieren der physikalischen Addresse</value></data>
+<data name="stat.pressButton" xml:space="preserve"><value>Bitte Programmiertaste drücken !</value></data>
+<data name="stat.pressCont" xml:space="preserve"><value>Bitte Gerät vorbereiten und dann Weiter drücken !</value></data>
+<data name="stat.progApp" xml:space="preserve"><value>, Programmiere Applikation.</value></data>
+<data name="stat.progSucc" xml:space="preserve"><value>Programmierung erfolgreich.</value></data>
+<data name="stat.ready" xml:space="preserve"><value>Bereit.</value></data>
+<data name="tabname.structural" xml:space="preserve"><value>Strukturelle Ansicht</value></data>
+<data name="tc.APCI" xml:space="preserve"><value>APCI</value></data>
+<data name="tc.RC" xml:space="preserve"><value>RC</value></data>
+<data name="tc.TPCI" xml:space="preserve"><value>TPCI</value></data>
+<data name="tc.ack" xml:space="preserve"><value>Ack</value></data>
+<data name="tc.actuator" xml:space="preserve"><value>Zugeordneter Aktor</value></data>
+<data name="tc.actuatortype" xml:space="preserve"><value>Aktortyp</value></data>
+<data name="tc.addresses" xml:space="preserve"><value>Addresse(n)</value></data>
+<data name="tc.app" xml:space="preserve"><value>Applikation</value></data>
+<data name="tc.data" xml:space="preserve"><value>Daten</value></data>
+<data name="tc.destAddr" xml:space="preserve"><value>Zieladresse</value></data>
+<data name="tc.eis" xml:space="preserve"><value>EIS</value></data>
+<data name="tc.func" xml:space="preserve"><value>Funktion</value></data>
+<data name="tc.funcgroupname" xml:space="preserve"><value>Aktor Funktionsgruppe</value></data>
+<data name="tc.funcgroups" xml:space="preserve"><value>Verwandte Funtionen</value></data>
+<data name="tc.funcname" xml:space="preserve"><value>Funktionsname</value></data>
+<data name="tc.idevtype" xml:space="preserve"><value>Gerätetyp</value></data>
+<data name="tc.manu" xml:space="preserve"><value>Hersteller</value></data>
+<data name="tc.name" xml:space="preserve"><value>Name</value></data>
+<data name="tc.nr" xml:space="preserve"><value>Nr.</value></data>
+<data name="tc.parity" xml:space="preserve"><value>Parität</value></data>
+<data name="tc.phaddress" xml:space="preserve"><value>Physikalische Adresse</value></data>
+<data name="tc.priority" xml:space="preserve"><value>Priorität</value></data>
+<data name="tc.prod" xml:space="preserve"><value>Produkt</value></data>
+<data name="tc.repeat" xml:space="preserve"><value>Wiederholung</value></data>
+<data name="tc.sourceAddr" xml:space="preserve"><value>Quelladresse</value></data>
+<data name="tc.state" xml:space="preserve"><value>Status</value></data>
+<data name="tc.test" xml:space="preserve"><value>Test</value></data>
+<data name="tit.about" xml:space="preserve"><value>Über BASys 2003</value></data>
+<data name="tit.chooseVDFile" xml:space="preserve"><value>Bitte VD_ Datei auswählen</value></data>
+<data name="tit.eibdataadmin" xml:space="preserve"><value>EIB Gerätedaten bearbeiten</value></data>
+<data name="tit.funcdialog" xml:space="preserve"><value>EIB Gerätefunktionen festlegen</value></data>
+<data name="tit.info" xml:space="preserve"><value>Information</value></data>
+<data name="tit.input" xml:space="preserve"><value>Eingabe</value></data>
+<data name="tit.language" xml:space="preserve"><value>Sprache auswählen</value></data>
+<data name="tit.newDimmableLamp" xml:space="preserve"><value>Neue dimmbare Lampe</value></data>
+<data name="tit.newJal" xml:space="preserve"><value>Neue Jalousie</value></data>
+<data name="tit.newLamp" xml:space="preserve"><value>Neue Lampe</value></data>
+<data name="tit.newProject" xml:space="preserve"><value>Neues Projekt anlegen</value></data>
+<data name="tit.newSensor" xml:space="preserve"><value>Neuer Sensor</value></data>
+<data name="tit.newValve" xml:space="preserve"><value>Neues Ventil</value></data>
+<data name="tit.programEIB" xml:space="preserve"><value>EIB Geräte programmieren</value></data>
+<data name="tit.question" xml:space="preserve"><value>Frage</value></data>
+<data name="tit.selDevice" xml:space="preserve"><value>Bitte Gerät auswählen</value></data>
+<data name="tit.selectInstallationDevice" xml:space="preserve"><value>Anzusteuerndes Geräte auswählen</value></data>
+<data name="tit.selection" xml:space="preserve"><value>Bitte auswählen</value></data>
+<data name="unknown" xml:space="preserve"><value>unbekannt</value></data>
+<data name="l.gatewayAddress" xml:space="preserve"><value>Adresse des KNXnet/IP Gateways (IP-Adresse oder Rechnername):</value></data>
+<data name="stat.gatewayConnecting" xml:space="preserve"><value>EIB Verbindung wird aufgebaut ...</value></data>
+<data name="stat.gatewayLost" xml:space="preserve"><value>EIB Verbindung unterbrochen.</value></data>
+<data name="mess.noEIBConnectionOpen" xml:space="preserve"><value>Es ist keine EIB Verbindung geöffnet.
+Öffnen Sie zunächst die EIB Verbindung im Menü.</value></data>
+</root>

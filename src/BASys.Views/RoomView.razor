@@ -1,0 +1,90 @@
+@inherits ObservingComponentBase
+
+<div class="room-view">
+    <h1 class="room-title">@Room.Name</h1>
+
+    <h2>@T("l.installedComponents")</h2>
+    <DropZone Accepts="AcceptsDevice" OnItemDropped="OnItemDropped">
+        <div class="grid-container">
+            <table class="table table-sm table-bordered table-hover grid mb-0">
+                <thead>
+                    <tr>
+                        <th>@T("tc.name")</th>
+                        <th>@T("tc.idevtype")</th>
+                        <th>@T("l.bussystem")</th>
+                        <th>@T("tc.actuator")</th>
+                        <th>@T("l.il")</th>
+                        <th>@T("tc.manu")</th>
+                        <th>@T("tc.actuatortype")</th>
+                        <th>@T("tc.funcgroupname")</th>
+                        <th>@T("tc.addresses")</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (InstallationDeviceRow currentDevice in Room.InstallationDevices)
+                    {
+                        <tr>
+                            <td>@currentDevice.Name</td>
+                            <td>@Localizer.GetName(currentDevice.DeviceType)</td>
+                            <td>@Localizer.GetName(currentDevice.BusSystem)</td>
+                            <td>@currentDevice.AssignedActuator</td>
+                            <td>@currentDevice.InstallationLocation</td>
+                            <td>@currentDevice.Manufacturer</td>
+                            <td>@currentDevice.ActuatorType</td>
+                            <td>@currentDevice.FunctionGroupName</td>
+                            <td>@currentDevice.Addresses</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </DropZone>
+
+    <h2>@T("l.junctionboxes")</h2>
+    <DropZone Accepts="AcceptsJunctionBox" OnItemDropped="OnItemDropped">
+        <div class="grid-container">
+            <table class="table table-sm table-bordered table-hover grid mb-0">
+                <thead>
+                    <tr>
+                        <th>@T("tc.name")</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (JunctionBoxRow currentBox in Room.JunctionBoxes)
+                    {
+                        <tr>
+                            <td>@currentBox.Name</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </DropZone>
+
+    <h2>@T("l.busdevices")</h2>
+    <div class="grid-container">
+        <table class="table table-sm table-bordered table-hover grid mb-0">
+            <thead>
+                <tr>
+                    <th>@T("tc.name")</th>
+                    <th>@T("tc.manu")</th>
+                    <th>@T("tc.actuatortype")</th>
+                    <th>@T("l.bussystem")</th>
+                    <th>@T("tc.phaddress")</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (BusDeviceRow currentBusDevice in Room.BusDevices)
+                {
+                    <tr>
+                        <td>@currentBusDevice.Name</td>
+                        <td>@currentBusDevice.Manufacturer</td>
+                        <td>@currentBusDevice.DeviceName</td>
+                        <td>@Localizer.GetName(currentBusDevice.BusSystem)</td>
+                        <td>@currentBusDevice.PhysicalAddress</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

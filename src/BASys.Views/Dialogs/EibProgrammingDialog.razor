@@ -1,0 +1,45 @@
+@inherits ObservingComponentBase
+
+<DialogFrame Title="@ViewModel.Title" Width="860px">
+    <fieldset>
+        <legend>@T("tit.programEIB")</legend>
+        <div class="grid-container tall">
+            <table class="table table-sm table-bordered table-hover grid mb-0">
+                <thead>
+                    <tr>
+                        <th>@T("tc.name")</th>
+                        <th>@T("tc.manu")</th>
+                        <th>@T("tc.prod")</th>
+                        <th>@T("tc.phaddress")</th>
+                        <th>@T("tc.state")</th>
+                        <th>@T("l.il")</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (ProgrammingDeviceRowViewModel currentRow in ViewModel.Devices)
+                    {
+                        <ProgrammingDeviceRow @key="currentRow" Row="currentRow" Dialog="ViewModel" />
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="button-row">
+            <label class="form-check-label"><input type="checkbox" class="form-check-input me-1" @bind="AddressOnly" />@T("l.phAddrOnly")</label>
+            <button type="button" class="btn btn-sm btn-primary" disabled="@(!ViewModel.ProgramAllCommand.CanExecute(null))" @onclick="OnProgramAll">@T("blabel.programAll")</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary" disabled="@(!ViewModel.ProgramSelectedCommand.CanExecute(null))" @onclick="OnProgramSelected">@T("blabel.programSelected")</button>
+        </div>
+        <div class="status-text">@ViewModel.StatusLine1</div>
+        <div class="status-text">@ViewModel.StatusLine2</div>
+        <div class="button-row">
+            <button type="button" class="btn btn-sm btn-outline-secondary" disabled="true">@T("blabel.continue")</button>
+        </div>
+        <div class="button-row">
+            <div class="progress-labeled"><span>@T("l.device"):</span><div class="progress"><div class="progress-bar" style="width:@(ViewModel.DeviceProgress)%"></div></div></div>
+            <div class="progress-labeled"><span>@T("l.all"):</span><div class="progress"><div class="progress-bar bg-success" style="width:@(ViewModel.TotalProgress)%"></div></div></div>
+            <button type="button" class="btn btn-sm btn-outline-secondary" disabled="@(!ViewModel.CancelProgrammingCommand.CanExecute(null))" @onclick="OnCancelProgramming">@T("blabel.cancelProgramming")</button>
+        </div>
+    </fieldset>
+    <div class="button-row">
+        <button type="button" class="btn btn-sm btn-outline-secondary" disabled="@(!ViewModel.CloseDialogCommand.CanExecute(null))" @onclick="OnClose">@T("blabel.close")</button>
+    </div>
+</DialogFrame>

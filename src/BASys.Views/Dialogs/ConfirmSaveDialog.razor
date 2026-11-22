@@ -1,0 +1,8 @@
+<DialogFrame Title="@ViewModel.Title" Width="380px">
+    <div class="message-text">@ViewModel.Message</div>
+    <div class="button-row">
+        <button type="button" class="btn btn-sm btn-primary" @onclick="OnSave">@ViewModel.YesText</button>
+        <button type="button" class="btn btn-sm btn-outline-secondary" @onclick="OnDiscard">@ViewModel.NoText</button>
+        <button type="button" class="btn btn-sm btn-outline-secondary" @onclick="OnCancel">@ViewModel.CancelText</button>
+    </div>
+</DialogFrame>

@@ -1,0 +1,16 @@
+@inherits ObservingComponentBase
+
+<DialogFrame Title="@ViewModel.Title" Width="360px">
+    <div class="form-row">
+        <label>@T("l.language")</label>
+        <select class="form-select form-select-sm" @ref="_focusElement" @bind="Language">
+            @foreach (KeyValuePair<string, string> currentLanguage in ViewModel.Languages)
+            {
+                <option value="@currentLanguage.Key">@currentLanguage.Value</option>
+            }
+        </select>
+    </div>
+    <div class="button-row">
+        <button type="button" class="btn btn-sm btn-primary" @onclick="OnOk">@T("blabel.ok")</button>
+    </div>
+</DialogFrame>
